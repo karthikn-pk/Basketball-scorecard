@@ -1,7 +1,6 @@
 
 body{
     background-color: #037bfc;
-    background-image: url("bball.jpg");
     
 }
 .main{
@@ -12,6 +11,21 @@ body{
     flex-wrap: wrap;
     
 }
+.team1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+    width: 15%;
+}
+.team2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid black;
+    width: 15%;
+}
+
 
 .container{
     color: rgb(247, 7, 7);
