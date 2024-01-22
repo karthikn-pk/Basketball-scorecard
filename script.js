@@ -1,5 +1,8 @@
 let homeh1EL=document.getElementById("homeh1")
 let guesth1EL=document.getElementById("guesth1")
+let addPlayer=document.getElementById("addplayer-btn")
+let popupEl=document.querySelector(".popup-box")
+let overlayEl=document.querySelector(".overlay")
 let count=0
 function addOne() {
     count+=1;
@@ -38,3 +41,25 @@ function reset(){
 
     guesth1EL.textContent=count2
 }
+
+addPlayer.addEventListener('click',function(){
+    popupEl.style.display="block";
+    overlayEl.style.display="block";
+});
+
+let playerAdd=document.getElementById("add-btn")
+let cancelEl=document.getElementById("cancel-btn")
+let playerName=document.getElementById("player-name-input")
+let teamOne=document.querySelector(".team1")
+
+playerAdd.addEventListener('click',function(){
+    let newEl=document.createElement('p')
+    newEl.innerHTML=`<h3>${playerName.value}</h3>`
+    teamOne.append(newEl)
+    popupEl.style.display="none";
+    overlayEl.style.display="none";
+
+})
+
+   
+
